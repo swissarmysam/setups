@@ -1,0 +1,186 @@
+/* IMPORT FONTS */
+@import url("https://use.typekit.net/poz6ggh.css");
+
+// /* BULMA VARS */
+$title-family: freight-big-pro, serif;
+$title-weight: 200;
+// $subtitle-family: acumin-pro, sans-serif;
+// $family-sans-serif: acumin-pro, sans-serif;
+
+/* CUSTOM VARS */
+$lighter-dark: #707070;
+
+/* IMPORT PROJECT STYLES */
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma";
+
+/* OVERWRITE BULMA CLASSES */
+
+.column {
+  &.is-four-fifths, &.is-four-fifths-tablet {
+    margin-right: 0.75em;
+    margin-left: 0.5em;
+  }
+}
+
+/* OWN CLASSES BASED ON BULMA NAMING CONVENTIONS */
+
+.is-mobile-only {
+  display: none;
+}
+
+.is-desktop-only {
+  display: block;
+}
+
+.is-lighter-dark {
+  color: $lighter-dark;
+}
+
+.has-right-shadow {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.301);
+  clip-path: inset(0px -5px 0px 0px);
+}
+
+.is-setup-only {
+  overflow-y: hidden !important;
+}
+
+.is-grid-start-center {
+  justify-items: center;
+  align-content: start;
+}
+
+.is-setup-image {
+  object-fit: cover;
+  max-height: 80% !important; 
+  width: 80% !important;
+}
+
+.has-no-decoration {
+  text-decoration: none;
+  color: $lighter-dark !important;
+    &:link {
+      color: $lighter-dark !important;
+    }
+    &:visited {
+      color: $lighter-dark !important;
+    }
+    &:hover {
+      color: $lighter-dark !important;
+    }
+    &:active {
+      color: $lighter-dark !important;
+    }
+}
+
+.has-no-overflow-y {
+  overflow-y: hidden !important;
+}
+
+.is-display-grid {
+  display: grid;
+  height: 100vh;
+}
+
+/* OVERWRITE MENU STYLES */
+.menu {
+  padding: 1em;
+
+  a {
+    text-decoration: none;
+    color: $lighter-dark !important;
+    &:link {
+      color: $lighter-dark !important;
+    }
+    &:visited {
+      color: $lighter-dark !important;
+    }
+    &:hover {
+      color: $lighter-dark !important;
+    }
+    &:active {
+      color: $lighter-dark !important;
+    }
+  }
+}
+
+.sidebar {
+  position: sticky;
+  display: inline-block;
+  max-height: 100vh;
+  overflow-y: hidden;
+  top: 0;
+  bottom: 0;
+
+  &.menu-list:last-child() {
+    margin-top: 1rem;
+  }
+ 
+}
+
+.grid-content {
+  display: inline-block;
+  overflow-y: auto;
+  margin-top: 2em;
+  width: 100%;
+  height: 100%;
+
+  .setup__img {
+    height: calc(100vh/3);
+
+    .photo{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+/* SCROLLBAR STYLE */
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: $lighter-dark;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $dark;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid $lighter-dark;  /* creates padding around scroll thumb */
+}
+
+body {
+  scrollbar-width: thin !important;          /* "auto" or "thin" */
+  scrollbar-color: $lighter-dark $dark !important;   /* scroll thumb and track */
+}
+
+/* TODO: ADD BREAKPOINT TO HIDE ASIDE ON MOBILE AND ADD HAMBURGER MENU - COLUMNS SINGLE */
+
+@media only screen and (max-width: 768px) {
+  .is-mobile-only {
+    display: block;
+  }
+
+  .is-desktop-only {
+    display: none;
+  }
+
+  .back {
+    order: -1;
+  }
+
+  .mt-6 {
+    margin-top: 0 !important;
+  }
+
+  .pl-6 {
+    padding-left: 1em !important;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}

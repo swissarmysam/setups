@@ -4,8 +4,8 @@
   "description": "Get inspired by some amazing setups! Inspired by all of the awesome subreddits that make me very jealous!",
   "main": "index.js",
   "scripts": {
-    "start": "parcel *.html",
-    "build:parcel": "parcel *.html --public-url ./",
+    "start": "parcel index.html ./views/*.html",
+    "build:parcel": "parcel index.html ./views/*.html --public-url ./",
     "build": "npm run clean && npm run build:parcel",
     "clean": "rm -rf dist/*"
   },

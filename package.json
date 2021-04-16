@@ -1,11 +1,11 @@
 {
   "name": "setups",
   "version": "0.0.1",
-  "description": "Get inspired by some amazing setups! Inspired by all of the awesome subreddits that make me very jealous!",
+  "description": "Get inspired by some amazing setups!",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html views/*.html",
-    "build:parcel": "parcel index.html views/*.html --public-url ./",
+    "start": "parcel index.html",
+    "build:parcel": "parcel index.html --public-url ./",
     "build": "npm run clean && npm run build:parcel",
     "clean": "rm -rf dist/*"
   },

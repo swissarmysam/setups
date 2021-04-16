@@ -1,6 +1,6 @@
 import { getSetups } from './src/js/renderContent';
-import { navBurger } from './src/js/handlers';
-import { handleBurgerMenu, handleModal } from './src/js/events';
+import { categoryTag, navBurger } from './src/js/handlers';
+import { handleBurgerMenu, filterOptions } from './src/js/events';
 
 const queryParams = new URLSearchParams(window.location.search);
 
@@ -12,3 +12,6 @@ if (!queryParams.has('id')) {
 
 // EVENT LISTENERS
 navBurger.addEventListener('click', handleBurgerMenu);
+categoryTag.forEach(tag => {
+  tag.addEventListener('click', () => filterOptions(tag.dataset.category));
+})

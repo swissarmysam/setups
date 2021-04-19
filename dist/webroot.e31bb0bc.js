@@ -7243,7 +7243,7 @@ exports.default = _default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.categoryTag = exports.navBurgerMenu = exports.navBurger = exports.innerContentGrid = exports.contentGrid = void 0;
+exports.allSetups = exports.categoryTag = exports.navBurgerMenu = exports.navBurger = exports.innerContentGrid = exports.contentGrid = void 0;
 
 /* ALL OF THE MAIN SELECTORS */
 var contentGrid = document.querySelector('.grid-content');
@@ -7256,6 +7256,8 @@ var navBurgerMenu = document.querySelector('.navbar-menu');
 exports.navBurgerMenu = navBurgerMenu;
 var categoryTag = document.querySelectorAll('[data-category]');
 exports.categoryTag = categoryTag;
+var allSetups = document.querySelectorAll('[data-categories]');
+exports.allSetups = allSetups;
 },{}],"src/js/renderContent.js":[function(require,module,exports) {
 "use strict";
 
@@ -7358,12 +7360,7 @@ function handleBurgerMenu() {
 }
 
 function filterOptions(tag) {
-  console.log(tag);
-  var allSetups = document.querySelectorAll('[data-categories]');
-  allSetups.forEach(function (cat) {
-    return console.log(cat.dataset.categories);
-  });
-  allSetups.forEach(function (setup) {
+  _handlers.allSetups.forEach(function (setup) {
     if (!setup.dataset.categories.includes(tag) && tag !== 'All') {
       setup.classList.add('is-hidden');
     } else {
@@ -7424,7 +7421,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53984" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55902" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

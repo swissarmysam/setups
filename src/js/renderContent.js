@@ -17,7 +17,7 @@ function createHTML(rec, page = 'index') {
     ];
     html = `<div class="column setup__img is-one-quarter" data-id='${id}' data-categories='${categories.join(
       ' '
-    )}'><a href='views/setup.html?id=${id}'><img class="photo" src='${photo}' loading='lazy'></a></div>`;
+    )}'><a href='setup.html?id=${id}'><img class="photo" src='${photo}' loading='lazy'></a></div>`;
   } else {
     const [name, photo, website, twitter, category, items] = [
       rec.fields.Name,
@@ -36,7 +36,7 @@ function createHTML(rec, page = 'index') {
           <p><a href='${website}'>${
       website !== undefined ? website : ''
     }</a></p>
-          <p class="mt-6 back"><a href='../index.html'>↞ BACK</a></p>
+          <p class="mt-6 back"><a href='./index.html'>↞ BACK</a></p>
         </div>
         <div class='column is-two-thirds '>
           <div class="is-display-grid is-grid-start-center ">

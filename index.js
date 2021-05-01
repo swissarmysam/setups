@@ -12,6 +12,7 @@ if (!queryParams.has('id')) {
 
 // EVENT LISTENERS
 navBurger.addEventListener('click', handleBurgerMenu);
+
 categoryTag.forEach(tag => {
   tag.addEventListener('click', () => filterOptions(tag.dataset.category));
 })

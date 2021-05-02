@@ -8,6 +8,7 @@ function handleBurgerMenu() {
 function filterOptions(tag) {
   
   allSetups.forEach(setup => {
+    console.log(`Setups ${setup}`);
     if (!setup.dataset.categories.includes(tag) && tag !== 'All') {
       setup.classList.add('is-hidden');
     } else {

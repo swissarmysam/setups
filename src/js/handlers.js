@@ -7,4 +7,11 @@ const navBurgerMenu = document.querySelector('.navbar-menu');
 const categoryTag = document.querySelectorAll('[data-category]');
 const allSetups = document.querySelectorAll('[data-categories]');
 
-export { contentGrid, innerContentGrid, navBurger, navBurgerMenu, categoryTag, allSetups };
+export {
+  contentGrid,
+  innerContentGrid,
+  navBurger,
+  navBurgerMenu,
+  categoryTag,
+  allSetups,
+};

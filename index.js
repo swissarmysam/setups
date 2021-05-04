@@ -1,5 +1,5 @@
 import { getSetups } from './src/js/renderContent';
-import { categoryTag, navBurger } from './src/js/handlers';
+import { categoryTag, navBurger, allSetups } from './src/js/handlers';
 import { handleBurgerMenu, filterOptions } from './src/js/events';
 
 const queryParams = new URLSearchParams(window.location.search);
@@ -15,7 +15,7 @@ navBurger.addEventListener('click', handleBurgerMenu);
 
 categoryTag.forEach(tag => {
   tag.addEventListener('click', () => {
-    filterOptions(tag.dataset.category);
+    filterOptions(allSetups, tag.dataset.category);
     console.log(`${tag.dataset.category} clicked`);
   });
 });

@@ -13,10 +13,18 @@ if (!queryParams.has('id')) {
 // EVENT LISTENERS
 navBurger.addEventListener('click', handleBurgerMenu);
 
-setTimeout(() => {
-  categoryTag.forEach(tag => {
-    tag.addEventListener('click', () => {
-      filterOptions(tag.dataset.category);
-    });
+categoryTag.forEach(tag => {
+  tag.addEventListener('click', () => {
+    filterOptions(tag.dataset.category);
   });
-}, 1000);
+});
+
+function filterOptions(tag) {
+  allSetups.forEach(setup => {
+    if (!setup.dataset.categories.includes(tag) && tag !== 'All') {
+      setup.classList.add('is-hidden');
+    } else {
+      setup.classList.remove('is-hidden');
+    }
+  });
+}

@@ -15,7 +15,7 @@ navBurger.addEventListener('click', handleBurgerMenu);
 
 categoryTag.forEach(tag => {
   tag.addEventListener('click', () => {
-    filterOptions(tag.dataset.category)
+    filterOptions(tag.dataset.category);
     console.log(`${tag.dataset.category} clicked`);
   });
-})
+});

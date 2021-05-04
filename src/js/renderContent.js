@@ -51,6 +51,7 @@ function createHTML(rec, page = 'index') {
 }
 
 function insertContentOnPage(setups) {
+  console.log(setups);
   if (typeof setups === 'object') {
     setups.forEach(setup => {
       innerContentGrid.innerHTML += setup;

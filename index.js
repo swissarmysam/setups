@@ -13,9 +13,10 @@ if (!queryParams.has('id')) {
 // EVENT LISTENERS
 navBurger.addEventListener('click', handleBurgerMenu);
 
-categoryTag.forEach(tag => {
-  tag.addEventListener('click', () => {
-    filterOptions(allSetups, tag.dataset.category);
-    console.log(`${tag.dataset.category} clicked`);
+setTimeout(() => {
+  categoryTag.forEach(tag => {
+    tag.addEventListener('click', () => {
+      filterOptions(tag.dataset.category);
+    });
   });
-});
+}, 1000);
